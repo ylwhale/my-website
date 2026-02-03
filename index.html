@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jingyu (Jeremy) | Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Animated background orbs -->
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+
+  <header class="container header reveal reveal--top">
+    <div class="header-left">
+      <h1>Jingyu (Jeremy)</h1>
+      <p class="subtitle">CS@UChicago · iOS / Web · Interested in Quant</p>
+
+      <!-- NAV: desktop shows links, mobile shows hamburger -->
+      <nav class="nav">
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="siteNav"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+        <div class="links" id="siteNav">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <!-- Put your image at assets/IMG_9940 2.HEIC -->
+      <img class="avatar float" src="assets/IMG_9940 2.HEIC" alt="avatar" />
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects" class="section reveal">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p class="muted">A few things I’ve built recently.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <h3>Project 1 My Personal Website</h3>
+          <p>Responsive portfolio site with glass UI, smooth scroll, and scroll animations.</p>
+          <p class="meta">Tech: HTML, CSS, JavaScript</p>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Project 2 Database</h3>
+          <p>Data-driven mini app with server-side rendering and SQLite storage.</p>
+          <p class="meta">Tech: Python, SQLite, HTML</p>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Project 3 iOS Application</h3>
+          <p>iOS app with gestures, animations, and a polished user flow.</p>
+          <p class="meta">Tech: Swift, UIKit, UX</p>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noreferrer">Figma</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-title">
+        <h2>About</h2>
+        <p class="muted">A quick intro.</p>
+      </div>
+
+      <div class="card card--wide">
+        <p>
+          Hi! I’m Jingyu Huang (Jeremy). I’m a master’s student in Computer Science at the
+          University of Chicago, focusing on application development and software engineering.
+        </p>
+
+        <ul class="bullets">
+          <li><b>Skills:</b> Swift / Python / HTML / CSS / SQL</li>
+          <li><b>Interests:</b> iOS Development, Web Apps, Data Analysis</li>
+          <li><b>Currently:</b> Building iOS & Web projects and improving UX/UI design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p class="muted">Let’s connect.</p>
+      </div>
+
+      <div class="card card--wide">
+        <p>📮 Email: <a href="mailto:jyhuang28@uchicago.edu">jyhuang28@uchicago.edu</a></p>
+        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/jingyuhuang28" target="_blank" rel="noreferrer">linkedin.com/in/jingyuhuang28</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer reveal">
+    <p>© <span id="year"></span> Jingyu Huang</p>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    // Scroll reveal
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+
+    // ===== Mobile hamburger menu =====
+    const menuBtn = document.getElementById("menuBtn");
+    const siteNav = document.getElementById("siteNav");
+    const navBackdrop = document.getElementById("navBackdrop");
+
+    function setMenuOpen(open) {
+      siteNav.classList.toggle("is-open", open);
+      menuBtn.setAttribute("aria-expanded", String(open));
+      navBackdrop.hidden = !open;
+      document.body.classList.toggle("menu-open", open);
+    }
+
+    menuBtn.addEventListener("click", () => {
+      const open = menuBtn.getAttribute("aria-expanded") !== "true";
+      setMenuOpen(open);
+    });
+
+    navBackdrop.addEventListener("click", () => setMenuOpen(false));
+
+    // Close after clicking any nav link (especially on mobile)
+    siteNav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    // Close on Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    });
+
+    // If resized to desktop, force close
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 720) setMenuOpen(false);
+    });
+  </script>
+</body>
+</html>
