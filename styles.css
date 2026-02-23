@@ -1,10 +1,10 @@
 :root{
-  --bg: #0b0f19;
-  --card: rgba(17,24,39,0.60);
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: rgba(255,255,255,0.10);
-  --shadow: 0 18px 60px rgba(0,0,0,0.35);
+  --bg: #f6f7fb;
+  --card: rgba(255,255,255,0.72);
+  --text: #111827;
+  --muted: #4b5563;
+  --border: rgba(17,24,39,0.10);
+  --shadow: 0 18px 60px rgba(17,24,39,0.12);
 }
 
 *{ box-sizing:border-box; }
@@ -25,7 +25,7 @@ body{
   height: 520px;
   border-radius: 999px;
   filter: blur(60px);
-  opacity: 0.35;
+  opacity: 0.22;
   z-index: -1;
   animation: drift 12s ease-in-out infinite;
 }
@@ -69,7 +69,7 @@ a{
   transition: transform .18s ease, opacity .18s ease, border-color .18s ease;
 }
 a:hover{
-  border-bottom-color: rgba(229,231,235,0.9);
+  border-bottom-color: rgba(17,24,39,0.55);
   transform: translateY(-1px);
   opacity: 0.95;
 }
@@ -81,7 +81,7 @@ a:hover{
   border: 1px solid var(--border);
   object-fit: cover;
   box-shadow: var(--shadow);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.8);
 }
 
 /* Avatar floating (dynamic effect) */
@@ -110,13 +110,13 @@ h2{ margin:0 0 6px; font-size: 26px; }
   border-radius: 18px;
   padding: 16px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+  box-shadow: 0 10px 26px rgba(17,24,39,0.12);
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 .card:hover{
   transform: translateY(-8px);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.35);
-  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 18px 50px rgba(17,24,39,0.16);
+  border-color: rgba(17,24,39,0.14);
 }
 .card--wide{ padding: 18px; }
 
@@ -163,7 +163,7 @@ h2{ margin:0 0 6px; font-size: 26px; }
   height: 42px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(17,24,39,0.55);
+  background: var(--card);
   color: var(--text);
   cursor: pointer;
   backdrop-filter: blur(12px);
@@ -171,7 +171,7 @@ h2{ margin:0 0 6px; font-size: 26px; }
 }
 .menu-btn:hover{
   transform: translateY(-1px);
-  border-color: rgba(255,255,255,0.16);
+  border-color: rgba(17,24,39,0.14);
 }
 
 .menu-icon{
@@ -199,7 +199,7 @@ h2{ margin:0 0 6px; font-size: 26px; }
 .nav-backdrop{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(17,24,39,0.18);
   z-index: 20;
 }
 
@@ -229,11 +229,11 @@ h2{ margin:0 0 6px; font-size: 26px; }
     gap: 10px;
     padding: 12px;
 
-    background: rgba(17,24,39,0.85);
+    background: rgba(255,255,255,0.92);
     border: 1px solid var(--border);
     border-radius: 16px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+    box-shadow: 0 18px 50px rgba(17,24,39,0.16);
   }
 
   .links.is-open{ display: flex; }
@@ -245,7 +245,7 @@ h2{ margin:0 0 6px; font-size: 26px; }
     border-bottom: none;
   }
   .links a:hover{
-    background: rgba(255,255,255,0.06);
+    background: rgba(17,24,39,0.06);
     transform: none;
   }
 
