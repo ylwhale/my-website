@@ -1,24 +1,25 @@
 <!doctype html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jingyu (Jeremy) | Personal Website</title>
+  <meta name="description" content="Jingyu Huang's personal website and portfolio, featuring RadioAtlas — a map-first iOS app with 54 curated stations across 28 countries, live streaming, offline audio, and personalized radio discovery." />
+  <title>Jingyu (Jeremy) Huang | Personal Website</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Animated background orbs -->
   <div class="bg-orb orb1"></div>
   <div class="bg-orb orb2"></div>
   <div class="bg-orb orb3"></div>
 
   <header class="container header reveal reveal--top">
     <div class="header-left">
-      <h1>Jingyu (Jeremy)</h1>
-      <p class="subtitle">CS@UChicago · iOS / Web · Interested in Backend Software Development, Full Stack Software Development, and iOS App Development</p>
+      <p class="eyebrow">Featured iOS Project</p>
+      <h1>Jingyu (Jeremy) Huang</h1>
+      <p class="subtitle">CS@UChicago · iOS / Web · Building <span class="accent-text">RadioAtlas</span>, a map-first iOS app that blends place discovery, live radio streaming, and offline audio into one interactive listening experience.</p>
+      <p class="hero-note">I focus on product-minded software development, polished user experience, and turning creative app ideas into clean, usable interfaces. RadioAtlas brings that together through interactive mapping, audio playback, persistent personalization, and thoughtful mobile UX.</p>
 
-      <!-- NAV: desktop shows links, mobile shows hamburger -->
       <nav class="nav">
         <button
           class="menu-btn"
@@ -35,6 +36,7 @@
 
         <div class="links" id="siteNav">
           <a href="#projects">Projects</a>
+          <a href="#radioatlas">RadioAtlas</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">GitHub</a>
@@ -43,8 +45,7 @@
     </div>
 
     <div class="header-right">
-      <!-- Put your image at assets/IMG_9940 2.HEIC -->
-      <img class="avatar float" src="assets/my_photo.jpg" alt="avatar" />
+      <img class="avatar float" src="assets/my_photo.jpg" alt="Portrait of Jingyu Huang" width="170" height="170" />
     </div>
   </header>
 
@@ -52,37 +53,115 @@
     <section id="projects" class="section reveal">
       <div class="section-title">
         <h2>Projects</h2>
-        <p class="muted">A few things I’ve built recently.</p>
+        <p class="muted">A few things I’ve built recently, with RadioAtlas as my current flagship iOS project.</p>
       </div>
 
       <div class="grid">
+        <article class="card reveal featured-card">
+          <span class="tag">Current Focus</span>
+          <h3>RadioAtlas</h3>
+          <p>A SwiftUI iOS app that lets users explore a curated world of places and radio stations through a full-screen map, live streams, offline audio, and personalized pin content.</p>
+          <p class="meta">Tech: Swift, SwiftUI, MapKit, AVFoundation, AVKit, Alamofire</p>
+          <div class="card-links">
+            <a href="#radioatlas">Details</a>
+            <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
         <article class="card reveal">
-          <h3>Project 1 My Personal Website</h3>
-          <p>Responsive portfolio site with glass UI, smooth scroll, and scroll animations.</p>
+          <h3>My Personal Website</h3>
+          <p>Responsive portfolio site with a glass-style interface, smooth scrolling, and a clean one-page layout.</p>
           <p class="meta">Tech: HTML, CSS, JavaScript</p>
           <div class="card-links">
-            <a href="#" target="_blank" rel="noreferrer">Code</a>
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a href="#about">About Me</a>
           </div>
         </article>
 
         <article class="card reveal">
-          <h3>Project 2 Database</h3>
-          <p>Data-driven mini app with server-side rendering and SQLite storage.</p>
+          <h3>Database Mini App</h3>
+          <p>Data-driven web project with server-side logic and SQLite-backed storage for structured information.</p>
           <p class="meta">Tech: Python, SQLite, HTML</p>
           <div class="card-links">
-            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">Code</a>
           </div>
         </article>
+      </div>
+    </section>
 
-        <article class="card reveal">
-          <h3>Project 3 iOS Application</h3>
-          <p>iOS app with gestures, animations, and a polished user flow.</p>
-          <p class="meta">Tech: Swift, UIKit, UX</p>
-          <div class="card-links">
-            <a href="#" target="_blank" rel="noreferrer">Figma</a>
+    <section id="radioatlas" class="section reveal">
+      <div class="section-title">
+        <h2>Featured Project: RadioAtlas</h2>
+        <p class="muted">A SwiftUI app that turns map exploration, live radio, and personal media into one listening experience.</p>
+      </div>
+
+      <div class="card card--wide project-spotlight">
+        <div class="spotlight-head">
+          <div>
+            <p class="eyebrow">iOS App</p>
+            <h3>A map-first listening experience</h3>
           </div>
-        </article>
+          <span class="status-pill">In Active Development</span>
+        </div>
+
+        <p>
+          RadioAtlas is a SwiftUI iOS app that lets users explore <strong>9 curated places</strong> and <strong>54 radio stations across 28 countries</strong>
+          through a full-screen, map-first interface. It combines live radio streams for stations with bundled offline audio for places,
+          so users can move between geographic exploration, ambient listening, and music playback in one polished experience.
+        </p>
+
+        <div class="stack-block">
+          <p class="meta-title">Project snapshot</p>
+          <div class="chips" aria-label="RadioAtlas project highlights">
+            <span>54 stations</span>
+            <span>28 countries</span>
+            <span>9 curated places</span>
+            <span>Live + offline audio</span>
+            <span>Background playback</span>
+            <span>Persistent personalization</span>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-item">
+            <h4>Map-First Exploration</h4>
+            <p>Users can browse content in lists or jump straight into a full-screen map with tappable pins for places and stations.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Hybrid Audio Playback</h4>
+            <p>The app supports both live radio streams and bundled offline tracks, with background playback and a persistent mini player.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Personalized Pins</h4>
+            <p>Users can save favorites, revisit recents, attach photos or videos to pins, and let the first attachment become the pin thumbnail.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Persistent Customization</h4>
+            <p>Map style, custom pins, category changes, and per-pin sound selections are saved across launches for a more personal experience.</p>
+          </div>
+        </div>
+
+        <div class="stack-block">
+          <p class="meta-title">Core stack</p>
+          <div class="chips" aria-label="Technology stack for RadioAtlas">
+            <span>Swift</span>
+            <span>SwiftUI</span>
+            <span>MapKit</span>
+            <span>AVFoundation</span>
+            <span>AVKit</span>
+            <span>PhotosUI</span>
+            <span>Alamofire</span>
+            <span>UserDefaults Persistence</span>
+          </div>
+        </div>
+
+        <div class="goal-box">
+          <p class="meta-title">Why this project matters</p>
+          <p>
+            RadioAtlas reflects how I approach product building end to end: I designed a map-first workflow,
+            implemented streaming and local audio playback, built persistence for favorites, recents, and media,
+            and focused on polish through onboarding, settings, accessibility, and resilient playback behavior.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -96,12 +175,13 @@
         <p>
           Hi! I’m Jingyu Huang (Jeremy). I’m a master’s student in Computer Science at the
           University of Chicago, focusing on application development and software engineering.
+          My current main project is RadioAtlas, a map-first iOS app that blends geographic exploration, live radio, offline audio, and personalized pin content into a single product.
         </p>
 
         <ul class="bullets">
-          <li><b>Skills:</b> Swift / Python / HTML / CSS / SQL</li>
-          <li><b>Interests:</b> iOS Development, Web Apps, Data Analysis</li>
-          <li><b>Currently:</b> Building iOS & Web projects and improving UX/UI design</li>
+          <li><b>Skills:</b> Swift / SwiftUI / MapKit / AVFoundation / Python / HTML / CSS / SQL</li>
+          <li><b>Interests:</b> iOS Development, Product Design, Full-Stack Development</li>
+          <li><b>Currently:</b> Expanding RadioAtlas with richer map interactions, audio features, and portfolio-ready product polish</li>
         </ul>
       </div>
     </section>
@@ -124,10 +204,8 @@
   </footer>
 
   <script>
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Smooth scroll for in-page links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener("click", (e) => {
         const id = a.getAttribute("href");
@@ -138,7 +216,6 @@
       });
     });
 
-    // Scroll reveal
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -150,7 +227,6 @@
     }, { threshold: 0.12 });
     els.forEach(el => io.observe(el));
 
-    // ===== Mobile hamburger menu =====
     const menuBtn = document.getElementById("menuBtn");
     const siteNav = document.getElementById("siteNav");
     const navBackdrop = document.getElementById("navBackdrop");
@@ -169,17 +245,14 @@
 
     navBackdrop.addEventListener("click", () => setMenuOpen(false));
 
-    // Close after clicking any nav link (especially on mobile)
     siteNav.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => setMenuOpen(false));
     });
 
-    // Close on Esc
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") setMenuOpen(false);
     });
 
-    // If resized to desktop, force close
     window.addEventListener("resize", () => {
       if (window.innerWidth > 720) setMenuOpen(false);
     });
