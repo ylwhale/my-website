@@ -1,11 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jingyu Huang's personal website and portfolio, featuring RadioAtlas — a map-first iOS app with 54 curated stations across 28 countries, live streaming, offline audio, and personalized radio discovery." />
-  <title>Jingyu (Jeremy) Huang | Personal Website</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Jingyu Huang's portfolio, featuring RadioAtlas plus backend and full-stack development work across iOS, web, APIs, and data-driven applications." />
+  <title>Jingyu (Jeremy) Huang | iOS & Full-Stack Developer</title>
+  <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+  </script>
+  <style>
+    html.no-js .reveal{
+      opacity:1 !important;
+      transform:none !important;
+      transition:none !important;
+    }
+    /* Critical inline styles so newer sections still look correct even if an older styles.css is cached */
+    .eyebrow{
+      margin:0 0 8px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:#4f46e5;
+    }
+    .accent-text{ color:#4f46e5; font-weight:700; }
+    .featured-card{ border-color:rgba(79,70,229,0.16); box-shadow:0 14px 34px rgba(79,70,229,0.12); }
+    .tag,.status-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .tag{ margin-bottom:10px; background:rgba(79,70,229,0.10); color:#4f46e5; }
+    .status-pill{ background:rgba(16,185,129,0.12); color:#047857; white-space:nowrap; }
+    .project-spotlight{ padding:22px; }
+    .spotlight-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:10px;
+    }
+    .meta-title{
+      margin:0 0 10px;
+      font-size:13px;
+      font-weight:700;
+      color:#111827;
+      opacity:0.88;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+    }
+    .stack-block,.goal-box{ margin-top:18px; }
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; }
+    .chips span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(17,24,39,0.08);
+      background:rgba(255,255,255,0.72);
+      font-size:13px;
+      color:#111827;
+    }
+    .feature-grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+    .feature-item{
+      padding:14px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.55);
+      border:1px solid rgba(17,24,39,0.07);
+    }
+    .goal-box{
+      padding:16px;
+      border-radius:16px;
+      background:rgba(79,70,229,0.06);
+      border:1px solid rgba(79,70,229,0.08);
+    }
+    @media (max-width: 720px){
+      .spotlight-head{ flex-direction:column; }
+      .feature-grid{ grid-template-columns:1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css?v=20260301" />
 </head>
 
 <body>
@@ -17,8 +102,8 @@
     <div class="header-left">
       <p class="eyebrow">Featured iOS Project</p>
       <h1>Jingyu (Jeremy) Huang</h1>
-      <p class="subtitle">CS@UChicago · iOS / Web · Building <span class="accent-text">RadioAtlas</span>, a map-first iOS app that blends place discovery, live radio streaming, and offline audio into one interactive listening experience.</p>
-      <p class="hero-note">I focus on product-minded software development, polished user experience, and turning creative app ideas into clean, usable interfaces. RadioAtlas brings that together through interactive mapping, audio playback, persistent personalization, and thoughtful mobile UX.</p>
+      <p class="subtitle">CS@UChicago · iOS · Backend · Full-Stack · Building <span class="accent-text">RadioAtlas</span> while continuing to develop backend systems and full-stack web apps centered on clean APIs, reliable data flow, and polished product experiences.</p>
+      <p class="hero-note">I focus on end-to-end software development: native iOS app development on the client side, plus backend and full-stack work across APIs, databases, and web interfaces. I enjoy designing strong technical foundations and turning them into products that feel clear, useful, and thoughtfully built.</p>
 
       <nav class="nav">
         <button
@@ -53,7 +138,7 @@
     <section id="projects" class="section reveal">
       <div class="section-title">
         <h2>Projects</h2>
-        <p class="muted">A few things I’ve built recently, with RadioAtlas as my current flagship iOS project.</p>
+        <p class="muted">A few things I’ve built recently, with RadioAtlas as my flagship iOS project and backend/full-stack engineering as a core part of my workflow.</p>
       </div>
 
       <div class="grid">
@@ -69,20 +154,20 @@
         </article>
 
         <article class="card reveal">
-          <h3>My Personal Website</h3>
-          <p>Responsive portfolio site with a glass-style interface, smooth scrolling, and a clean one-page layout.</p>
-          <p class="meta">Tech: HTML, CSS, JavaScript</p>
+          <h3>Backend &amp; Full-Stack Work</h3>
+          <p>REST-style web apps and data-driven tools built with server-side Python, database-backed workflows, and frontend integrations that connect clean backend logic to usable interfaces.</p>
+          <p class="meta">Tech: Python, Flask, SQLite, HTML, CSS, JavaScript</p>
           <div class="card-links">
-            <a href="#about">About Me</a>
+            <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">Code</a>
           </div>
         </article>
 
         <article class="card reveal">
-          <h3>Database Mini App</h3>
-          <p>Data-driven web project with server-side logic and SQLite-backed storage for structured information.</p>
-          <p class="meta">Tech: Python, SQLite, HTML</p>
+          <h3>My Personal Website</h3>
+          <p>Responsive portfolio site with a glass-style interface, smooth scrolling, and a clean one-page layout designed to present both product work and engineering focus.</p>
+          <p class="meta">Tech: HTML, CSS, JavaScript</p>
           <div class="card-links">
-            <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">Code</a>
+            <a href="#about">About Me</a>
           </div>
         </article>
       </div>
@@ -174,14 +259,15 @@
       <div class="card card--wide">
         <p>
           Hi! I’m Jingyu Huang (Jeremy). I’m a master’s student in Computer Science at the
-          University of Chicago, focusing on application development and software engineering.
-          My current main project is RadioAtlas, a map-first iOS app that blends geographic exploration, live radio, offline audio, and personalized pin content into a single product.
+          University of Chicago, focused on application development, backend engineering, and full-stack product work.
+          RadioAtlas is my main product focus right now, and I’m also continuing to strengthen my experience with APIs,
+          database-backed systems, and end-to-end web application development.
         </p>
 
         <ul class="bullets">
-          <li><b>Skills:</b> Swift / SwiftUI / MapKit / AVFoundation / Python / HTML / CSS / SQL</li>
-          <li><b>Interests:</b> iOS Development, Product Design, Full-Stack Development</li>
-          <li><b>Currently:</b> Expanding RadioAtlas with richer map interactions, audio features, and portfolio-ready product polish</li>
+          <li><b>Skills:</b> Swift / SwiftUI / MapKit / Python / Flask / REST APIs / HTML / CSS / JavaScript / SQL</li>
+          <li><b>Interests:</b> iOS Development, Backend Engineering, Full-Stack Development</li>
+          <li><b>Currently:</b> Expanding RadioAtlas while continuing to build stronger backend services, cleaner data models, and more complete full-stack applications</li>
         </ul>
       </div>
     </section>
