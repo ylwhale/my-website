@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jingyu Huang's portfolio, featuring RadioAtlas plus backend and full-stack development work across iOS, web, APIs, and data-driven applications." />
-  <title>Jingyu (Jeremy) Huang | iOS & Full-Stack Developer</title>
+  <meta name="description" content="Jingyu Huang's software engineering portfolio: AI agent systems at Super Amplify, the NoteMap AI iOS app, backend engineering, and full-stack projects." />
+  <title>Jingyu (Jeremy) Huang | Software Engineer &amp; AI Agent Systems</title>
   <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
@@ -90,7 +90,7 @@
       .feature-grid{ grid-template-columns:1fr; }
     }
   </style>
-  <link rel="stylesheet" href="styles.css?v=20260301" />
+  <link rel="stylesheet" href="styles.css?v=20260925" />
 </head>
 
 <body>
@@ -100,10 +100,10 @@
 
   <header class="container header reveal reveal--top">
     <div class="header-left">
-      <p class="eyebrow">Featured iOS Project</p>
+      <p class="eyebrow">Software Engineer · AI Agent Systems</p>
       <h1>Jingyu (Jeremy) Huang</h1>
-      <p class="subtitle">CS@UChicago · iOS · Backend · Full-Stack · Building <span class="accent-text">RadioAtlas</span> while continuing to develop backend systems and full-stack web apps centered on clean APIs, reliable data flow, and polished product experiences.</p>
-      <p class="hero-note">I focus on end-to-end software development: native iOS app development on the client side, plus backend and full-stack work across APIs, databases, and web interfaces. I enjoy designing strong technical foundations and turning them into products that feel clear, useful, and thoughtfully built.</p>
+      <p class="subtitle">Computer Science master’s student at the University of Chicago. I build AI-powered products across <span class="accent-text">agent systems, native apps, and backend services.</span></p>
+      <p class="hero-note">Most recently, I developed macOS and iOS experiences for AI agents at Super Amplify. My work spans reliable agent workflows, permission-controlled desktop tools, and evidence-grounded AI applications such as NoteMap AI.</p>
 
       <nav class="nav">
         <button
@@ -120,8 +120,9 @@
         <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
         <div class="links" id="siteNav">
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#radioatlas">RadioAtlas</a>
+          <a href="#notemap">NoteMap AI</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">GitHub</a>
@@ -135,15 +136,105 @@
   </header>
 
   <main class="container">
+    <section id="experience" class="section reveal">
+      <div class="section-title">
+        <h2>Experience</h2>
+        <p class="muted">Building software that connects AI capabilities to dependable, usable products.</p>
+      </div>
+
+      <article class="card card--wide experience-spotlight">
+        <div class="spotlight-head">
+          <div>
+            <p class="eyebrow">Super Amplify · July–September 2026</p>
+            <h3>Software Development Engineer Intern — AI Agent Systems</h3>
+          </div>
+          <span class="status-pill">Recent internship</span>
+        </div>
+
+        <p class="experience-lead">Developed native SwiftUI applications for macOS and iOS/iPadOS that bring AI chat, agent workflows, and coding tools into a connected product experience.</p>
+
+        <div class="feature-grid" aria-label="Super Amplify engineering contributions">
+          <div class="feature-item">
+            <h4>Native AI experiences</h4>
+            <p>Integrated streaming chat, model selection, file and media capture, and agent workflows with platform APIs across desktop and mobile.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Reliable agent execution</h4>
+            <p>Implemented conversation synchronization and execution states for approvals, resuming, cancellation, and recovery.</p>
+          </div>
+          <div class="feature-item">
+            <h4>AI coding workspace</h4>
+            <p>Built project-aware tools for bounded local context, file inspection and edits, shell sessions, Git workflows, and code review.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Permissioned automation</h4>
+            <p>Worked on desktop and browser automation with per-app permissions, action checkpoints, and protections for sensitive fields.</p>
+          </div>
+        </div>
+
+        <div class="stack-block">
+          <p class="meta-title">Areas of work</p>
+          <div class="chips" aria-label="Super Amplify areas of work">
+            <span>SwiftUI</span><span>macOS &amp; iOS</span><span>AI agents</span><span>Agent execution</span><span>Context retrieval</span><span>Computer use</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card experience-secondary">
+        <div>
+          <p class="eyebrow">Beijing Zongheng Shengshi Software · 2017–2025</p>
+          <h3>Backend Software Engineer</h3>
+        </div>
+        <p>Built and maintained enterprise services in Java and Python, including REST APIs, database-backed workflows, integrations, and performance improvements across long-running systems.</p>
+      </article>
+    </section>
+
     <section id="projects" class="section reveal">
       <div class="section-title">
         <h2>Projects</h2>
-        <p class="muted">A few things I’ve built recently, with RadioAtlas as my flagship iOS project and backend/full-stack engineering as a core part of my workflow.</p>
+        <p class="muted">Selected work in grounded AI, native iOS experiences, and cloud-backed applications.</p>
       </div>
 
-      <div class="grid">
-        <article class="card reveal featured-card">
-          <span class="tag">Current Focus</span>
+      <article id="notemap" class="card card--wide project-spotlight featured-card">
+        <div class="spotlight-head">
+          <div>
+            <p class="eyebrow">Featured Project · 2026</p>
+            <h3>NoteMap AI</h3>
+          </div>
+          <a class="project-cta" href="https://github.com/ylwhale/NoteMapAI" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </div>
+
+        <p class="experience-lead">An offline-first SwiftUI app that helps people capture notes, find relevant evidence, and turn grounded answers into reusable plans.</p>
+
+        <div class="feature-grid" aria-label="NoteMap AI project features">
+          <div class="feature-item">
+            <h4>Capture and organize</h4>
+            <p>Save notes with tags and optional location context, then browse the library through search, filters, and a map.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Retrieve before generating</h4>
+            <p>Find relevant excerpts across the note library and show the selected evidence before an AI answer is generated.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Ground answers in sources</h4>
+            <p>Validate source IDs, exact quotes, and concrete claims; keep responses that fail the grounding checks clearly marked as unverified.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Make insights reusable</h4>
+            <p>Save source-linked plans and capture information through iOS sharing, widgets, and Shortcuts integrations.</p>
+          </div>
+        </div>
+
+        <div class="stack-block">
+          <p class="meta-title">Built with</p>
+          <div class="chips" aria-label="NoteMap AI technology stack">
+            <span>SwiftUI</span><span>Swift</span><span>On-device retrieval</span><span>NaturalLanguage</span><span>OpenAI Responses API</span><span>Keychain</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid supporting-projects">
+        <article class="card reveal">
           <h3>RadioAtlas</h3>
           <p>A SwiftUI iOS app that lets users explore a curated world of places and radio stations through a full-screen map, live streams, offline audio, and personalized pin content.</p>
           <p class="meta">Tech: Swift, SwiftUI, MapKit, AVFoundation, AVKit, Alamofire</p>
@@ -154,28 +245,20 @@
         </article>
 
         <article class="card reveal">
-          <h3>Backend &amp; Full-Stack Work</h3>
-          <p>REST-style web apps and data-driven tools built with server-side Python, database-backed workflows, and frontend integrations that connect clean backend logic to usable interfaces.</p>
-          <p class="meta">Tech: Python, Flask, SQLite, HTML, CSS, JavaScript</p>
+          <h3>AWS Annotation Application</h3>
+          <p>A cloud-backed web app for uploading files, submitting annotation jobs, and checking job status through a Flask interface.</p>
+          <p class="meta">Tech: Python, Flask, Amazon S3, DynamoDB, EC2</p>
           <div class="card-links">
-            <a href="https://github.com/ylwhale" target="_blank" rel="noreferrer">Code</a>
+            <a href="https://github.com/ylwhale" target="_blank" rel="noopener noreferrer">GitHub profile</a>
           </div>
         </article>
 
-        <article class="card reveal">
-          <h3>My Personal Website</h3>
-          <p>Responsive portfolio site with a glass-style interface, smooth scrolling, and a clean one-page layout designed to present both product work and engineering focus.</p>
-          <p class="meta">Tech: HTML, CSS, JavaScript</p>
-          <div class="card-links">
-            <a href="#about">About Me</a>
-          </div>
-        </article>
       </div>
     </section>
 
     <section id="radioatlas" class="section reveal">
       <div class="section-title">
-        <h2>Featured Project: RadioAtlas</h2>
+        <h2>More on RadioAtlas</h2>
         <p class="muted">A SwiftUI app that turns map exploration, live radio, and personal media into one listening experience.</p>
       </div>
 
@@ -185,7 +268,7 @@
             <p class="eyebrow">iOS App</p>
             <h3>A map-first listening experience</h3>
           </div>
-          <span class="status-pill">In Active Development</span>
+          <span class="status-pill">iOS project</span>
         </div>
 
         <p>
@@ -258,16 +341,15 @@
 
       <div class="card card--wide">
         <p>
-          Hi! I’m Jingyu Huang (Jeremy). I’m a master’s student in Computer Science at the
-          University of Chicago, focused on application development, backend engineering, and full-stack product work.
-          RadioAtlas is my main product focus right now, and I’m also continuing to strengthen my experience with APIs,
-          database-backed systems, and end-to-end web application development.
+          Hi! I’m Jingyu Huang (Jeremy), a Computer Science master’s student at the University of Chicago,
+          expected to graduate in December 2026. I bring backend engineering experience to AI-powered product development:
+          from enterprise APIs and data systems to native agent workflows and evidence-grounded mobile apps.
         </p>
 
         <ul class="bullets">
-          <li><b>Skills:</b> Swift / SwiftUI / MapKit / Python / Flask / REST APIs / HTML / CSS / JavaScript / SQL</li>
-          <li><b>Interests:</b> iOS Development, Backend Engineering, Full-Stack Development</li>
-          <li><b>Currently:</b> Expanding RadioAtlas while continuing to build stronger backend services, cleaner data models, and more complete full-stack applications</li>
+          <li><b>Skills:</b> Swift / SwiftUI / Python / Java / REST APIs / SQL / AWS / AI agents / retrieval-augmented generation</li>
+          <li><b>Interests:</b> AI Engineering, Backend Systems, Native Apps, Full-Stack Development</li>
+          <li><b>Recent work:</b> Super Amplify agent systems and the NoteMap AI iOS app</li>
         </ul>
       </div>
     </section>
