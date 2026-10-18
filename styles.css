@@ -184,9 +184,6 @@ section[id], article[id]{ scroll-margin-top: 22px; }
 .card .eyebrow{ color: var(--accent); }
 .card .experience-lead{ color: var(--text); font-size: 17px; line-height: 1.6; max-width: 780px; }
 .experience-spotlight{ padding: 24px; border-color: rgba(79,70,229,0.20); }
-.experience-secondary{ display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-top: 16px; }
-.experience-secondary > div{ flex: 0 0 38%; }
-.experience-secondary > p{ flex: 1; margin: 0; }
 .supporting-projects{ margin-top: 16px; }
 .project-cta{
   display: inline-flex;
@@ -399,9 +396,6 @@ section[id], article[id]{ scroll-margin-top: 22px; }
     gap: 10px;
   }
 
-  .experience-secondary{ display: block; }
-  .experience-secondary > p{ margin-top: 10px; }
-
   body.menu-open{ overflow: hidden; }
 }
 
@@ -428,3 +422,8 @@ section[id], article[id]{ scroll-margin-top: 22px; }
     transition: none;
   }
 }
+
+/* Compact summary of earlier experience, without employer names or dates. */
+.backend-background { margin-top: 16px; }
+.backend-background h3 { margin: 0 0 8px; }
+.backend-background p { margin: 0; line-height: 1.65; }
